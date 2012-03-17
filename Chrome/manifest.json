@@ -1,0 +1,16 @@
+{
+  "name": "Selfsurfing",
+  "version": "1",
+  "description": "Selfsurfing, 2012, is a Chrome extension that creates a self-surfing, auto-updating clone of my browser in real time. Jonas Lund – http://jonaslund.com/",
+  "homepage_url": "http://jonaslund.com/works/selfsurfing/",
+  "icons": { "16": "icon_16.png",
+             "48": "icon_48.png",
+            "128": "icon_128.png" },
+  "background_page": "background.html",  
+  "permissions": ["tabs", "*://*/*"],
+  "browser_action": {
+    "name": "Start Selfsurfing",
+    "default_icon": "icon.png",
+    "icons": ["icon.png", "icon_on.png"]
+  }
+}
