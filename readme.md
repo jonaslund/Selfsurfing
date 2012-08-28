@@ -8,4 +8,8 @@ My browser has a server extension installed which transmits the current state of
 Check work page
 [http://jonaslund.com/works/selfsurfing/](http://jonaslund.com/works/selfsurfing/)
 
+Install plugin here
+[https://chrome.google.com/webstore/detail/dcocplkobacjnekgaebhknlfaehiblcd/](Install Plugin Here)
+*Since a while Google only allows users to install extensions through their Chrome Webstore.
+
 Jonas Lund
