@@ -1,9 +1,9 @@
+var reqURL = "http://jonaslund.biz/works/selfsurfing/scroll.txt?" + Math.floor(Math.random()*2000);
 var scrollChecker = "";
 
 if(document.webkitVisibilityState === "visible") {
 
   scrollChecker = setInterval(function() {    
-      var reqURL = "http://jonaslund.com/works/selfsurfing/scroll.txt?" + Math.floor(Math.random()*880000);
       var http = new XMLHttpRequest();
       http.open("GET", reqURL, true);
       http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -25,7 +25,6 @@ document.addEventListener("webkitvisibilitychange", function() {
     if(!scrollChecker) {
       scrollChecker = setInterval(function() {    
           var http = new XMLHttpRequest();
-          var reqURL = "http://jonaslund.com/works/selfsurfing/scroll.txt?" + Math.floor(Math.random()*880000);
           http.open("GET", reqURL, true);
           http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           http.onreadystatechange = function() {

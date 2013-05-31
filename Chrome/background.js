@@ -1,18 +1,21 @@
+//the transmission becomes the creation becomes the work
 on = null;
 
 chrome.browserAction.onClicked.addListener(function(tab) {   
+  console.log("clicked");
+
   //check if running already
   if(on) {
     clearInterval(requestUpdates);  
     chrome.browserAction.setIcon({path: 'icon.png'});
     chrome.browserAction.setTitle({title: "Start Selfsurfing"});
+
     on = null;
-    
   } else {
     chrome.browserAction.setIcon({path: 'icon_on.png'});
     chrome.browserAction.setTitle({title: "Selfsurfing is running"});
 
-    var reqURL = "http://jonaslund.com/works/selfsurfing/json.txt?" + Math.floor(Math.random()*888000);
+    var reqURL = "http://jonaslund.biz/works/selfsurfing/json.txt?" + Math.floor(Math.random()*888000);
     var http = new XMLHttpRequest();
     http.open("GET", reqURL, true);
     http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");    
@@ -39,7 +42,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
           on = 1;
           requestUpdates = setInterval(function() {             
             var http = new XMLHttpRequest();
-            var reqURL2 = "http://jonaslund.com/works/selfsurfing/json.txt?" + Math.floor(Math.random()*888000);
+            var reqURL2 = "http://jonaslund.biz/works/selfsurfing/json.txt?" + Math.floor(Math.random()*888000);
 
             http.open("GET", reqURL2, true);
             http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");    
@@ -115,9 +118,10 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
         });
       } else {
-        //failed loading tabs
-        chrome.browserAction.setIcon({path: 'icon.png'});
-        chrome.browserAction.setTitle({title: "Start Selfsurfing"});
+        //failed loading t2sp.net
+        //chrome.browserAction.setIcon({path: 'icon.png'});
+        //chrome.browserAction.setTitle({title: "Start Selfsurfing"});
+
       }
     }
     http.send();
@@ -138,6 +142,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 
   }
 });
+
 
 
 function findObjectByAttribute (items, attribute, value) {  
